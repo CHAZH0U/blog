@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{%- extends "_layout.swig" -%}
+{%- import '_macro/post.swig' as post_template -%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{%- block title -%} {{ page.title }} - {{ config.title }} {%- endblock -%}
 
-<body>
-
-</body>
-
-</html>
+{%- block content -%}
+  {{ post_template.render(page) }}
+{%- endblock -%}
